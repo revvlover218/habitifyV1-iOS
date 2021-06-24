@@ -1,5 +1,5 @@
 //
-//  DestructiveButtonLabel.swift
+//  HABDestructiveButtonLabel.swift
 //  HabitifyV1
 //
 //  Created by Reshal Luchman on 2021/06/21.
@@ -7,9 +7,13 @@
 
 import SwiftUI
 
-struct DestructiveButtonLabel: View {
+struct HABDestructiveButtonLabel: View {
     
     private var buttonName = ""
+    
+    init(with name: String = "Button") {
+        self.buttonName = name
+    }
     
     var body: some View {
         Text(buttonName)
@@ -21,14 +25,11 @@ struct DestructiveButtonLabel: View {
             .shadow(radius: 10)
             .padding([.leading, .trailing, .bottom])
     }
-    
-    init(with name: String = "Button") {
-        self.buttonName = name
-    }
 }
 
-struct DestructiveButtonLabel_Previews: PreviewProvider {
+struct HABDestructiveButtonLabel_Previews: PreviewProvider {
+    
     static var previews: some View {
-        DestructiveButtonLabel()
+        HABDestructiveButtonLabel()
     }
 }

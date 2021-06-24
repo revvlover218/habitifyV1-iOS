@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HabitButtonStyle: ButtonStyle {
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .shadow(radius: 10)

@@ -13,11 +13,11 @@ struct ContentView: View {
     @State private var shouldShowAddNewHabitScreen = false
     @State private var shouldShowEditHabitScreen = false
     @State private var shouldShowDeleteAlert = false
-
+    
     init() {
-        // Transparent backgrounds not quite available yet in this version of swift UI for lists, forms
+        #warning("SwiftUI 2.0: Transparent backgrounds not available yet in this version of SwiftUI for lists, forms")
         UITableView.appearance().backgroundColor = .clear
-        UITableView.appearance().separatorStyle = .none
+        //        UITableView.appearance().separatorStyle = .none
         UITableViewCell.appearance().backgroundColor = .clear
     }
     
@@ -36,7 +36,7 @@ struct ContentView: View {
                         }, label: {
                             HABHabitContentViewCell(with: habit.name, daysCompleted: habit.daysCompleted)
                         })
-                        .buttonStyle(PrimaryButtonStyle())
+                        .buttonStyle(HABPrimaryButtonStyle())
                         .fullScreenCover(isPresented: $shouldShowEditHabitScreen, onDismiss: {
                             self.shouldShowEditHabitScreen = false
                             viewModel.loadSavedHabits()
@@ -53,15 +53,15 @@ struct ContentView: View {
                 Button(action: {
                     self.shouldShowAddNewHabitScreen = true
                 }, label: {
-                    PrimaryButtonLabel(with: "Add new habit")
+                    HABPrimaryButtonLabel(with: "Add new habit")
                 })
-                .buttonStyle(PrimaryButtonStyle())
+                .buttonStyle(HABPrimaryButtonStyle())
                 .sheet(isPresented: $shouldShowAddNewHabitScreen, onDismiss: {
                     self.shouldShowAddNewHabitScreen = false
                     viewModel.loadSavedHabits()
                 }, content: {
                     AddHabitScreen()
-            })
+                })
             }
         }.onAppear(perform: {
             viewModel.loadSavedHabits()
@@ -69,12 +69,6 @@ struct ContentView: View {
     }
     
     // MARK: - Private
-    
-    private func habitSelected(at indexOffsets: IndexSet) {
-        indexOffsets.forEach { index in
-            viewModel.habitSelected(at: index)
-        }
-    }
     
     private func deleteHabit(at indexOffsets: IndexSet) {
         indexOffsets.forEach { index in

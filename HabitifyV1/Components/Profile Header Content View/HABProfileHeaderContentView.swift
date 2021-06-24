@@ -12,13 +12,18 @@ struct HABProfileHeaderContentView: View {
     private var profileName: String?
     private var profileDescription: String?
     
+    init(with name: String, description: String) {
+        self.profileName = name
+        self.profileDescription = description
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Image(systemName: "person.crop.circle")
-                .renderingMode(.original)
                 .resizable()
                 .frame(width: 50, height: 50)
                 .aspectRatio(contentMode: .fit)
+                .foregroundColor(.primary)
             HStack(spacing: 0) {
                 Text("Hi, ")
                     .font(.largeTitle)
@@ -30,11 +35,6 @@ struct HABProfileHeaderContentView: View {
                 .font(.subheadline)
                 .fontWeight(.light)
         }.padding()
-    }
-    
-    init(with name: String, description: String) {
-        self.profileName = name
-        self.profileDescription = description
     }
 }
 

@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct HabitButtonImage: View {
+    
     private var imageName: String?
     private var colorName: String?
+    
+    init(with imageName: String, colorName: String = "lightBlue") {
+        self.imageName = imageName
+        self.colorName = colorName
+    }
     
     var body: some View {
         Image(systemName: imageName ?? "")
@@ -19,9 +25,14 @@ struct HabitButtonImage: View {
             .background(Color(colorName ?? ""))
             .clipShape(Circle())
     }
+}
+
+struct HabitButtonImage_Previews: PreviewProvider {
     
-    init(with imageName: String, colorName: String) {
-        self.imageName = imageName
-        self.colorName = colorName
+    static var previews: some View {
+        VStack(spacing: 10) {
+            HabitButtonImage(with: "plus", colorName: "lightGreen")
+            HabitButtonImage(with: "minus", colorName: "lightRed")
+        }
     }
 }
