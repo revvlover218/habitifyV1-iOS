@@ -22,10 +22,6 @@ final class HomeScreenViewModel: ObservableObject {
         }
     }
     
-    func habitSelected(at index: Int) {
-//        guard let habitSelected = habits?[index] else { return }
-    }
-    
     func deleteHabit(at index: Int) {
         guard let habitToDelete = habits?[index] else { return }
         habits?.remove(at: index)

@@ -11,9 +11,9 @@ struct AddHabitScreen: View {
     
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject private var viewModel = AddHabitViewModel()
+    @State private var isPenaltySheetDisplayed = false
     
     private var isEditingHabit = false
-    @State private var isPenaltySheetDisplayed = false
     
     init(with selectedHabit: HabitWrapperModel? = nil, isEditingHabit: Bool = false) {
         self.isEditingHabit = isEditingHabit
@@ -40,8 +40,8 @@ struct AddHabitScreen: View {
                                 Button(action: {
                                     isPenaltySheetDisplayed = true
                                 }, label: {
-                                    DestructiveButtonLabel(with: "Take a Penalty")
-                                }).buttonStyle(PrimaryButtonStyle())
+                                    HABDestructiveButtonLabel(with: "Take a Penalty")
+                                }).buttonStyle(HABPrimaryButtonStyle())
                                 .padding([.top])
                                 .actionSheet(isPresented: $isPenaltySheetDisplayed, content: {
                                     ActionSheet(title: Text("Select a penalty to take"),
@@ -60,8 +60,8 @@ struct AddHabitScreen: View {
                             }
                             dismissView()
                         }, label: {
-                            PrimaryButtonLabel(with: isEditingHabit ? "Save habit" : "Add new habit")
-                        }).buttonStyle(PrimaryButtonStyle())
+                            HABPrimaryButtonLabel(with: isEditingHabit ? "Save habit" : "Add new habit")
+                        }).buttonStyle(HABPrimaryButtonStyle())
                     }
                 }
                 .navigationTitle(isEditingHabit ? "Edit Habit" : "New habit")
@@ -94,7 +94,7 @@ struct AddHabitScreen: View {
     private func generateActionSheetItems() -> [ActionSheet.Button] {
         var actionButtons = [ActionSheet.Button]()
         
-        actionButtons.append(ActionSheet.Button.default(Text("Minor Penalty (3)")){
+        actionButtons.append(ActionSheet.Button.default(Text("Minor Penalty (3)")) {
             if (viewModel.daysCompleted >= 3) {
                 viewModel.daysCompleted -= 3
             } else {
@@ -102,7 +102,7 @@ struct AddHabitScreen: View {
             }
         })
         
-        actionButtons.append(ActionSheet.Button.default(Text("Major Penalty (7)")){
+        actionButtons.append(ActionSheet.Button.default(Text("Major Penalty (7)")) {
             if (viewModel.daysCompleted >= 7) {
                 viewModel.daysCompleted -= 7
             } else {
@@ -110,13 +110,14 @@ struct AddHabitScreen: View {
             }
         })
         
-        actionButtons.append(ActionSheet.Button.destructive(Text("Reset (Back to 0)")){
+        actionButtons.append(ActionSheet.Button.destructive(Text("Reset (Back to 0)")) {
             viewModel.daysCompleted = 0
         })
         
         actionButtons.append(ActionSheet.Button.cancel({
             isPenaltySheetDisplayed = false
         }))
+        
         return actionButtons
     }
 }

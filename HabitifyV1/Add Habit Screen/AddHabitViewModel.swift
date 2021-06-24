@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AddHabitViewModel: ObservableObject {
+final class AddHabitViewModel: ObservableObject {
     
     //Adding a new habit
     

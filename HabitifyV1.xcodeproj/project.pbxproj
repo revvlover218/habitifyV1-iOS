@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D07202F267B661C002831E3 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D07202E267B661C002831E3 /* PrimaryButtonStyle.swift */; };
+		6D07202F267B661C002831E3 /* HABPrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D07202E267B661C002831E3 /* HABPrimaryButtonStyle.swift */; };
 		6D356140267B449700485D78 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D35613F267B449700485D78 /* CoreDataManager.swift */; };
 		6D356146267B497500485D78 /* HabitiftyCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6D356144267B497500485D78 /* HabitiftyCoreDataModel.xcdatamodeld */; };
 		6D356148267B4AC000485D78 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D356147267B4AC000485D78 /* HomeScreenViewModel.swift */; };
@@ -17,17 +17,17 @@
 		6D76E56F265D8CE6006D2A00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D76E56E265D8CE6006D2A00 /* Preview Assets.xcassets */; };
 		6D76E579265D9177006D2A00 /* AddHabitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D76E578265D9177006D2A00 /* AddHabitScreen.swift */; };
 		6DBC0113267B894E00B93F2B /* AddHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC0112267B894E00B93F2B /* AddHabitViewModel.swift */; };
-		6DBC0115267BB7A100B93F2B /* PrimaryButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC0114267BB7A100B93F2B /* PrimaryButtonLabel.swift */; };
+		6DBC0115267BB7A100B93F2B /* HABPrimaryButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC0114267BB7A100B93F2B /* HABPrimaryButtonLabel.swift */; };
 		6DBC0118267BB9F000B93F2B /* HABBackgroundGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC0117267BB9F000B93F2B /* HABBackgroundGradientView.swift */; };
 		6DBC011A267BE66600B93F2B /* HABHabitContentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC0119267BE66600B93F2B /* HABHabitContentViewCell.swift */; };
 		6DBC011E267BE72E00B93F2B /* HABProfileHeaderContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBC011D267BE72E00B93F2B /* HABProfileHeaderContentView.swift */; };
 		6DF34927266379A3003FE73A /* HabitButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF34926266379A3003FE73A /* HabitButtonStyle.swift */; };
 		6DFCE835267C8C2C0087966A /* HabitButtonImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFCE834267C8C2B0087966A /* HabitButtonImage.swift */; };
-		6DFCE8382680C33B0087966A /* DestructiveButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFCE8372680C33B0087966A /* DestructiveButtonLabel.swift */; };
+		6DFCE8382680C33B0087966A /* HABDestructiveButtonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DFCE8372680C33B0087966A /* HABDestructiveButtonLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6D07202E267B661C002831E3 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		6D07202E267B661C002831E3 /* HABPrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HABPrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		6D35613F267B449700485D78 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		6D356145267B497500485D78 /* HabitiftyCoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HabitiftyCoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		6D356147267B4AC000485D78 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
@@ -39,13 +39,13 @@
 		6D76E570265D8CE6006D2A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D76E578265D9177006D2A00 /* AddHabitScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitScreen.swift; sourceTree = "<group>"; };
 		6DBC0112267B894E00B93F2B /* AddHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewModel.swift; sourceTree = "<group>"; };
-		6DBC0114267BB7A100B93F2B /* PrimaryButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonLabel.swift; sourceTree = "<group>"; };
+		6DBC0114267BB7A100B93F2B /* HABPrimaryButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HABPrimaryButtonLabel.swift; sourceTree = "<group>"; };
 		6DBC0117267BB9F000B93F2B /* HABBackgroundGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HABBackgroundGradientView.swift; sourceTree = "<group>"; };
 		6DBC0119267BE66600B93F2B /* HABHabitContentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HABHabitContentViewCell.swift; sourceTree = "<group>"; };
 		6DBC011D267BE72E00B93F2B /* HABProfileHeaderContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HABProfileHeaderContentView.swift; sourceTree = "<group>"; };
 		6DF34926266379A3003FE73A /* HabitButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitButtonStyle.swift; sourceTree = "<group>"; };
 		6DFCE834267C8C2B0087966A /* HabitButtonImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitButtonImage.swift; sourceTree = "<group>"; };
-		6DFCE8372680C33B0087966A /* DestructiveButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestructiveButtonLabel.swift; sourceTree = "<group>"; };
+		6DFCE8372680C33B0087966A /* HABDestructiveButtonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HABDestructiveButtonLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +62,8 @@
 		6D07202D267B65FF002831E3 /* Primary Button */ = {
 			isa = PBXGroup;
 			children = (
-				6D07202E267B661C002831E3 /* PrimaryButtonStyle.swift */,
-				6DBC0114267BB7A100B93F2B /* PrimaryButtonLabel.swift */,
+				6D07202E267B661C002831E3 /* HABPrimaryButtonStyle.swift */,
+				6DBC0114267BB7A100B93F2B /* HABPrimaryButtonLabel.swift */,
 			);
 			path = "Primary Button";
 			sourceTree = "<group>";
@@ -87,8 +87,8 @@
 		6D76E566265D8CE5006D2A00 /* HabitifyV1 */ = {
 			isa = PBXGroup;
 			children = (
-				6D795BDE266014F700697C50 /* Main Screen */,
 				6D76E567265D8CE5006D2A00 /* HabitifyV1App.swift */,
+				6D795BDE266014F700697C50 /* Main Screen */,
 				6DBC0111267B887400B93F2B /* Add Habit Screen */,
 				6D76E56B265D8CE6006D2A00 /* Assets.xcassets */,
 				6DBBC071267B418B0011EDF4 /* CoreData */,
@@ -110,7 +110,7 @@
 		6D76E577265D9127006D2A00 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6DBC011C267BE70400B93F2B /* Habit Profile Header Content View */,
+				6DBC011C267BE70400B93F2B /* Profile Header Content View */,
 				6DBC0116267BB9D700B93F2B /* Background Gradients */,
 				6DBC011B267BE6E900B93F2B /* Habit Content View Cell */,
 				6D07202D267B65FF002831E3 /* Primary Button */,
@@ -163,12 +163,12 @@
 			path = "Habit Content View Cell";
 			sourceTree = "<group>";
 		};
-		6DBC011C267BE70400B93F2B /* Habit Profile Header Content View */ = {
+		6DBC011C267BE70400B93F2B /* Profile Header Content View */ = {
 			isa = PBXGroup;
 			children = (
 				6DBC011D267BE72E00B93F2B /* HABProfileHeaderContentView.swift */,
 			);
-			path = "Habit Profile Header Content View";
+			path = "Profile Header Content View";
 			sourceTree = "<group>";
 		};
 		6DF3492526637989003FE73A /* HabitButton */ = {
@@ -183,7 +183,7 @@
 		6DFCE8362680C3030087966A /* Destructive Button */ = {
 			isa = PBXGroup;
 			children = (
-				6DFCE8372680C33B0087966A /* DestructiveButtonLabel.swift */,
+				6DFCE8372680C33B0087966A /* HABDestructiveButtonLabel.swift */,
 			);
 			path = "Destructive Button";
 			sourceTree = "<group>";
@@ -257,7 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DFCE8382680C33B0087966A /* DestructiveButtonLabel.swift in Sources */,
+				6DFCE8382680C33B0087966A /* HABDestructiveButtonLabel.swift in Sources */,
 				6DF34927266379A3003FE73A /* HabitButtonStyle.swift in Sources */,
 				6D76E56A265D8CE5006D2A00 /* ContentView.swift in Sources */,
 				6DBC0118267BB9F000B93F2B /* HABBackgroundGradientView.swift in Sources */,
@@ -267,9 +267,9 @@
 				6DBC011A267BE66600B93F2B /* HABHabitContentViewCell.swift in Sources */,
 				6D76E568265D8CE5006D2A00 /* HabitifyV1App.swift in Sources */,
 				6DFCE835267C8C2C0087966A /* HabitButtonImage.swift in Sources */,
-				6D07202F267B661C002831E3 /* PrimaryButtonStyle.swift in Sources */,
+				6D07202F267B661C002831E3 /* HABPrimaryButtonStyle.swift in Sources */,
 				6D356140267B449700485D78 /* CoreDataManager.swift in Sources */,
-				6DBC0115267BB7A100B93F2B /* PrimaryButtonLabel.swift in Sources */,
+				6DBC0115267BB7A100B93F2B /* HABPrimaryButtonLabel.swift in Sources */,
 				6D76E579265D9177006D2A00 /* AddHabitScreen.swift in Sources */,
 				6D356146267B497500485D78 /* HabitiftyCoreDataModel.xcdatamodeld in Sources */,
 			);
