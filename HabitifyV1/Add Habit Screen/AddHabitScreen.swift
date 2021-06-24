@@ -41,7 +41,8 @@ struct AddHabitScreen: View {
                                     isPenaltySheetDisplayed = true
                                 }, label: {
                                     HABDestructiveButtonLabel(with: "Take a Penalty")
-                                }).buttonStyle(HABPrimaryButtonStyle())
+                                })
+                                .buttonStyle(HABPrimaryButtonStyle())
                                 .padding([.top])
                                 .actionSheet(isPresented: $isPenaltySheetDisplayed, content: {
                                     ActionSheet(title: Text("Select a penalty to take"),
@@ -53,15 +54,12 @@ struct AddHabitScreen: View {
                     VStack {
                         Spacer()
                         Button(action: {
-                            if isEditingHabit {
-                                viewModel.editExistingHabit()
-                            } else {
-                                viewModel.addNewHabit()
-                            }
+                            isEditingHabit ? viewModel.editExistingHabit() : viewModel.addNewHabit()
                             dismissView()
                         }, label: {
                             HABPrimaryButtonLabel(with: isEditingHabit ? "Save habit" : "Add new habit")
-                        }).buttonStyle(HABPrimaryButtonStyle())
+                        })
+                        .buttonStyle(HABPrimaryButtonStyle())
                     }
                 }
                 .navigationTitle(isEditingHabit ? "Edit Habit" : "New habit")
