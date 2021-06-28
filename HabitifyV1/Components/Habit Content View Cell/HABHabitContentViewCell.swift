@@ -72,19 +72,20 @@ struct HABHabitContentViewCell_Previews: PreviewProvider {
 private extension HABHabitContentViewCell {
     
     func generateProgressDescription(with daysCompleted: Int) -> String {
-        if daysCompleted == 0 {
-            return "Habit not started"
-        } else if daysCompleted == 1 {
-            return "1 day completed"
-        } else if daysCompleted > 1 && daysCompleted <= 2 {
-            return "\(daysCompleted) days completed"
-        } else if daysCompleted > 2 && daysCompleted < 21 {
-            return streakGenerator(number: daysCompleted)
-        } else if daysCompleted == 21 {
-            return "Habit Complete! Well done"
-        } else {
-            return "\(daysCompleted)"
-        }
+        return "\(21 - daysCompleted) days to go"
+//        if daysCompleted == 0 {
+//            return "Habit not started"
+//        } else if daysCompleted == 1 {
+//            return "1 day completed"
+//        } else if daysCompleted > 1 && daysCompleted <= 2 {
+//            return "\(daysCompleted) days completed"
+//        } else if daysCompleted > 2 && daysCompleted < 21 {
+//            return streakGenerator(number: daysCompleted)
+//        } else if daysCompleted == 21 {
+//            return "Habit Complete! Well done"
+//        } else {
+//            return "\(daysCompleted)"
+//        }
     }
     
     private func streakGenerator(number: Int) -> String {
