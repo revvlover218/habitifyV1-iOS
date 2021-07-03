@@ -36,6 +36,11 @@ struct AddHabitScreen: View {
                         }
                         
                         if isEditingHabit {
+                            
+                            Section(header: Text("Updates")) {
+                                Text("Habit last updated: \(viewModel.lastModified)")
+                            }
+                            
                             Section(header: Text("Other")) {
                                 Button(action: {
                                     isPenaltySheetDisplayed = true

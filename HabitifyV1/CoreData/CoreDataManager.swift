@@ -65,14 +65,19 @@ class CoreDataManager {
         let habits = CoreDataHabitListModel(context: viewContext)
         habits.habitName = habitRequest.name
         habits.daysCompleted = Int16(habitRequest.daysCompleted ?? 0)
+        habits.lastModified = habitRequest.lastModified
         saveCoreData()
     }
     
     // MARK: - Edit
     
-    func updateCoreDataHabit(with name: String, daysCompleted: Int, habit: HabitWrapperModel) {
+    func updateCoreDataHabit(with name: String,
+                             daysCompleted: Int,
+                             lastModified: String,
+                             habit: HabitWrapperModel) {
         habit.coreDataHabit.habitName = name
         habit.coreDataHabit.daysCompleted = Int16(daysCompleted)
+        habit.coreDataHabit.lastModified = lastModified
         saveCoreData()
     }
 }
@@ -88,6 +93,9 @@ struct HabitWrapperModel: Identifiable, Hashable {
     var daysCompleted: Int {
         return Int(coreDataHabit.daysCompleted)
     }
+    var lastModified: String {
+        return coreDataHabit.lastModified ?? ""
+    }
 }
 
 // MARK: - HabitWrapperRequestModel
@@ -95,9 +103,13 @@ struct HabitWrapperModel: Identifiable, Hashable {
 struct HabitWrapperRequestModel {
     var name: String?
     var daysCompleted: Int?
+    var lastModified: String?
     
-    init(with name: String, daysCompleted: Int) {
+    init(with name: String,
+         daysCompleted: Int,
+         lastModified: String) {
         self.name = name
         self.daysCompleted = daysCompleted
+        self.lastModified = lastModified
     }
 }
