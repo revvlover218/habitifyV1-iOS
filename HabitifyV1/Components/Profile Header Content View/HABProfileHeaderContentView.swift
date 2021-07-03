@@ -23,7 +23,6 @@ struct HABProfileHeaderContentView: View {
                 .resizable()
                 .frame(width: 50, height: 50)
                 .aspectRatio(contentMode: .fit)
-                .foregroundColor(.primary)
             HStack(spacing: 0) {
                 Text("Hi, ")
                     .font(.largeTitle)
@@ -43,5 +42,6 @@ struct HABProfileHeaderContentView_Previews: PreviewProvider {
     
     static var previews: some View {
         HABProfileHeaderContentView(with: "Reshal", description: "You have 3 habits \nto practice")
+        HABProfileHeaderContentView(with: "Reshal", description: "You have 3 habits \nto practice").preferredColorScheme(.dark)
     }
 }

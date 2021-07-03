@@ -28,12 +28,10 @@ struct AddHabitScreen: View {
                     Form {
                         Section(header: Text("Habit Details")) {
                             TextField("Habit Name", text: $viewModel.name)
+                                .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
                         }
                         
-                        Section(header: Text("Progress Details")) {
-                            Text("You have \(viewModel.daysCompleted) days completed")
-                            Stepper("Add days already done?", value: $viewModel.daysCompleted, in: 0...21)
-                        }
+                        ProgressDetailsView(with: $viewModel.daysCompleted)
                         
                         if isEditingHabit {
                             
@@ -139,3 +137,19 @@ extension View {
     }
 }
 #endif
+
+struct ProgressDetailsView: View {
+    
+    @Binding var daysCompleted: Int
+    
+    init(with daysCompleted: Binding<Int>) {
+        self._daysCompleted = daysCompleted
+    }
+    
+    var body: some View {
+        Section(header: Text("Progress Details")) {
+            Text("You have \(daysCompleted) days completed")
+            Stepper("Add days already done?", value: $daysCompleted, in: 0...21)
+        }
+    }
+}

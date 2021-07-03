@@ -17,7 +17,6 @@ struct ContentView: View {
     init() {
         #warning("SwiftUI 2.0: Transparent backgrounds not available yet in this version of SwiftUI for lists, forms")
         UITableView.appearance().backgroundColor = .clear
-        //        UITableView.appearance().separatorStyle = .none
         UITableViewCell.appearance().backgroundColor = .clear
     }
     
@@ -27,7 +26,7 @@ struct ContentView: View {
             VStack(alignment: .leading) {
                 HABProfileHeaderContentView(with: "Reshal", description: "You have \(viewModel.numberOfHabits) habits to practice")
                 Spacer()
-                //Bindable lists is not currently possible in xcode 12 or swiftUI 1.0. It is available from xcode 13 onwards.
+                //Interactive lists is not currently possible in xcode 12 or swiftUI 1.0. It is available from xcode 13 onwards.
                 List {
                     ForEach(viewModel.habits ?? []) { habit in
                         Button(action: {
