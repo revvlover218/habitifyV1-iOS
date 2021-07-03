@@ -28,7 +28,6 @@ struct AddHabitScreen: View {
                     Form {
                         Section(header: Text("Habit Details")) {
                             TextField("Habit Name", text: $viewModel.name)
-                                .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
                         }
                         
                         ProgressDetailsView(with: $viewModel.daysCompleted)
@@ -54,16 +53,6 @@ struct AddHabitScreen: View {
                             }
                         }
                     }
-                    VStack {
-                        Spacer()
-                        Button(action: {
-                            isEditingHabit ? viewModel.editExistingHabit() : viewModel.addNewHabit()
-                            dismissView()
-                        }, label: {
-                            HABPrimaryButtonLabel(with: isEditingHabit ? "Save habit" : "Add new habit")
-                        })
-                        .buttonStyle(HABPrimaryButtonStyle())
-                    }
                 }
                 .navigationTitle(isEditingHabit ? "Edit Habit" : "New habit")
                 .navigationBarTitleDisplayMode(isEditingHabit ? .inline : .automatic)
@@ -81,6 +70,16 @@ struct AddHabitScreen: View {
                         })
                     }
                 })
+                VStack {
+                    Spacer()
+                    Button(action: {
+                        isEditingHabit ? viewModel.editExistingHabit() : viewModel.addNewHabit()
+                        dismissView()
+                    }, label: {
+                        HABPrimaryButtonLabel(with: isEditingHabit ? "Save habit" : "Add new habit")
+                    })
+                    .buttonStyle(HABPrimaryButtonStyle())
+                }
             }
         }
         .accentColor(.purple)
